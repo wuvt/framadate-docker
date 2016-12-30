@@ -17,6 +17,8 @@ RUN chmod +x /usr/local/bin/composer-setup.sh
 RUN docker-php-ext-configure intl
 RUN docker-php-ext-install intl
 
+RUN docker-php-ext-install pdo pdo_pgsql
+
 WORKDIR /var/www/
 RUN git clone https://framagit.org/framasoft/framadate.git html
 
